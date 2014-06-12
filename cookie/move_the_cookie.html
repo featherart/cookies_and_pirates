@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Move the Cookie!</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+    <!-- // MVC Way
+      // window.onload = function() {
+      //   var cookieView = new CookieView(),
+      //       cookieModel = new CookieModel(),
+      //       cookieController = new CookieController(cookieView,cookieModel);
+
+      //   console.log("here's cookieModel: " + cookieModel.location);
+      //   console.log("here's cookieView: " + cookieView.cookieImage);
+      
+      //   cookieController.bindEventListeners();
+      // }
+      -->
+    </script>
+
+
+    <script type="text/javascript">
+    <!-- // spaghetti way
+    window.onload = function() {
+      var cookieImage = document.querySelector("#myImage"),
+          cookieButton = document.querySelector("#moveCookie"),
+          cookieLocation = 0;
+
+      cookieImage.style.left = cookieLocation;
+
+      cookieButton.addEventListener('click', function() {
+        cookieLocation += 10;
+        cookieImage.style.left = cookieLocation;
+      });
+    };
+    -->
+    </script>
+<form>
+<img id="myImage" src="cookie.jpg" height="300" style="position: absolute; left: 0; top: 100" />
+
+<p>Run, Cookie, Run!</p>
+<input type="button" id="moveCookie" value="Click Me" />
+</form>
+
+
+</body>
+</html>
+<script type="text/javascript" src="CookieModel.js"></script>
+<script type="text/javascript" src="CookieView.js"></script>
+<script type="text/javascript" src="CookieController.js"></script>

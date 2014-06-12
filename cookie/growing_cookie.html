@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>Supersize Me Cookie</title>
+</head>
+<body>
+	
+<button href="#" onclick="myStopFunction();">stop the cookie!</button>
+<br>
+<img name="fred" id="freddie" src="cookie.jpg" width="100" height="auto">
+
+
+
+
+<script type="text/javascript">
+window.onload = function() { 
+	var myImage = document.images["fred"];	  
+	myImage.height = 100;
+	myImage.width = 100;
+
+    function makeBig(num) {
+	    myImage.width *= 1.1; 
+	    myImage.height *= 1.1;		
+    }
+	var myVar=setInterval(function(){ makeBig() },500);
+
+	window.myStopFunction = function() {
+		window.clearInterval(myVar);
+
+	}
+
+}
+</script>
+
+</body>
+</html>
